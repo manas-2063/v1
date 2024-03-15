@@ -246,15 +246,7 @@ def banner():
 ██   ██ ███████ ██   ██ ██   ██ ██   ██ 
 
 ''')
-raw_link=requests.Session().get('https://pastebin.com/raw/3GUWsT7M').text
-if 'ON.   ' in raw_link:
-    pass
-elif 'OFF.   ' in raw_link:
-    exit('\033[1;97m[\033[1;91m•\033[1;97m] This tool hass ben expired')
-elif 'OFF.   ' or 'ON...   ' not in raw_link:
-    exit('\033[1;97m[\033[1;91m•\033[1;97m] This tool hass ben expired')
-else:
-    exit('\033[1;97m[\033[1;91m•\033[1;97m] This tool hass ben expired')
+
 #-------------------------------------------#
 def main():
 	os.system('clear')
