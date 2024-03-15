@@ -694,7 +694,6 @@ def passwrd():
 	os.system('clear')
 	banner()
 	info()
-	print(f' \x1b[38;5;196m[\x1b[37m•\x1b[38;5;196m]\x1b[37mUSER NAME\033[1;91m :\033[1;96m "+uname)
     print("\033[97;1m[\033[92;1m•\033[97;1m] \033[10;93m TODAY'S DATE :\033[1;92m "+date)
     print('\033[97;1m[\033[92;1m+\033[97;1m] \033[1;92mYOUR TOTAL IDz \033[0;97m:\033[1;92m ',str(len(id)))
     print("\033[97;1m[\033[92;1m•\033[97;1m] \x1b[38;5;208mSTARTED YOUR CLONING TIME\033[0;97m :> \033[1;92m"+time.strftime("%H:%M")+" "+ tag)
