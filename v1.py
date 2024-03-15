@@ -247,7 +247,7 @@ def info():
  AUTHOR     : MANAS TAMANG
  GITHUB     : MANAS-EXE
  FACEBOOK   : MAN AS
- VERSION    : \x1b[37m\x1b[38;5;196m{0.0.1}\x1b[37m
+ VERSION    : 0.0.1
 \x1b[37m----------------------------------------------""")
 def banner():
 	print(logo)
