@@ -319,7 +319,6 @@ def namepsw():
         with open("data/name.xml", "r") as name_file_obj:
             uname = name_file_obj.readline().strip()
     else:
-    	os.system('espeak -a 300 " Enter,  Your,   Real,  Name,"')
         print(" \x1b[38;5;196m[\x1b[37m•\x1b[38;5;196m]\x1b[37m ENTER YOUR REAL NAME")
         linex()
         uname = input(" \x1b[38;5;196m[\x1b[37m•\x1b[38;5;196m]\x1b[37m ENTER YOUR NAME : ")
@@ -330,7 +329,6 @@ def namepsw():
         with open("data/password.xml", "r") as password_file_obj:
             upass = password_file_obj.readline().strip()
     else:
-    	os.system('espeak -a 300 " Enter,  Add,   A,  Password,   To,  Your,  Account,"')
         print(" \x1b[38;5;196m[\x1b[37m•\x1b[38;5;196m]\x1b[37m ADD A PSW TO YOUR ACCOUNT")
         linex()
         upass = input(" \x1b[38;5;196m[\x1b[37m•\x1b[38;5;196m]\x1b[37m ENTER YOUR PASSWORD : ")
