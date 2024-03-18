@@ -445,7 +445,7 @@ def api1(ids,names,passlist):
                     break
             elif 'www.facebook.com' in po['error']['message']:
                     uid = str(po['error']['error_data']['uid'])
-                    $print#(f#'\r{R}❲{Y}MANAS-CP{R}❳{Y} '+uid+f'# {R}|{Y} '+pas+'\033[1;97m')
+                    #print#(f#'\r{R}❲{Y}MANAS-CP{R}❳{Y} '+uid+f'# {R}|{Y} '+pas+'\033[1;97m')
                     file_path = os.path.join(folder_path, 'MANAS-FILE-M1-CP.txt')
                     with open(file_path, 'a') as file:
                         file.write(uid+' | '+pas+'\n')
