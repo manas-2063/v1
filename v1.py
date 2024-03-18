@@ -6,7 +6,7 @@ import os
 from os import path
 from pathlib import Path
 import os,requests,base64,zlib,pip,urllib,sys,time,random,platform,pip,uuid,subprocess
-print(f'\x1b[38;5;196m(\x1b[38;5;48m~\x1b[38;5;196m)\x1b[38;5;48m Loading Installed ')
+print(f'\x1b[38;5;231m(\x1b[38;5;231m~\x1b[38;5;231m)\x1b[38;5;231m Loading..... ')
 try:
     import requests,os,json,time,re,random,sys,uuid,string
     from string import *
@@ -72,19 +72,19 @@ def clear():
 ##------------(LOGO)------------##
 os.system('xdg-open https://www.facebook.com/manas2080?mibextid=ZbWKwL')
 
-logo=("""     ___ ___                     _____.___.
+logo=("""
 \x1b[38;5;231m ███╗   ███╗ █████╗ ███╗   ██╗ █████╗ ███████╗    \x1b[38;5;231m
 \x1b[38;5;231m ████╗ ████║██╔══██╗████╗  ██║██╔══██╗██╔════╝    \x1b[38;5;231m
 \x1b[38;5;231m ██╔████╔██║███████║██╔██╗ ██║███████║███████╗    \x1b[38;5;231m
 \x1b[38;5;231m ██║╚██╔╝██║██╔══██║██║╚██╗██║██╔══██║╚════██║    \x1b[38;5;231m
 \x1b[38;5;231m ██║ ╚═╝ ██║██║  ██║██║ ╚████║██║  ██║███████║    \x1b[38;5;231m
 \x1b[38;5;231m ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝  \x1b[38;5;231m """)
-print(f"""\x1b[37m----------------------------------------------
+\033[1;97m----------------------------------------------
  AUTHOR     : MANAS TAMANG
  GITHUB     : MANAS-EXE
  FACEBOOK   : MAN AS
  VERSION    : 0.0.1
-\x1b[37m----------------------------------------------""")
+\033[1;97m----------------------------------------------""")
 #---------------APPROVAL------------##
 def approval():
   clear()
@@ -146,7 +146,7 @@ def file():
     try:
         fo = open(file,'r').read().splitlines()
     except FileNotFoundError:
-        linex();print(f'{R}❲{G}~{R}❳{G} File location not found ');time.sleep(2);file()
+        linex();print(f'{R}❲{G}~{R}❳{G} FILE  NOT FOUND ');time.sleep(2);file()
     clear();print(f'{R}❲{G}~{R}❳{G} Method {R}❲{G}M1 COOKIES NOT SHOW {R}❳{G} ');print(f'{R}❲{G}~{R}❳{G} Method {R}❲{G}M2 COOKIES WILL SHOW{R}❳{G} ');linex()
     methd=input(f"{R}❲{G}~{R}❳{G} Selection {R}:{G} ")
     plist=[]
